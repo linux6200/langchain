@@ -1,0 +1,21 @@
+{
+    "query": "什么是SRDF/Star?",
+    "result": "SRDF/Star是一种灾难恢复解决方案，由三个站点组成：主（生产）站点、辅助站点和第三站点。辅助站点同步镜像来自主站点的数据，而第三站点则异步镜像生产数据。当主站点出现故障时，SRDF/Star解决方案允许您在其余站点之间快速移动操作并在远程站点重建镜像。当主站点出现故障时，SR",
+    "source_documents": [Document(page_content="SRDF/Star 解决方案 ..................................................................... 80第4章\n第5章\n第6章\n第7章\n第8章目录\n4 产品指南   PowerMaxOS", metadata={
+            "page": 3,
+            "source": "/home/ubuntu/sources/pdfs/docu88904_PowerMax-系列产品指南.pdf"
+        }),
+  Document(page_content="图 17 带有  R22 设备的并发  SRDF/Star\nR11 R2 \nR22SRDF/S\nSRDF/A\nSRDF/A\nrecovery links Site B \nActive\nInactiveSite A \nSite C \n级联  SRDF/Star\n在级联  SRDF/Star 解决方案中，同步辅助站点较之异步第三站点始终拥有更新的数\n据。当同步辅助站点出现故障时，级联  SRDF/Star 解决方案可以在主站点和异步第三\n站点之间以增量方式建立  SRDF/A 会话。\n级联  SRDF/Star 可以确定当前活动  R1 周期（捕获）内容何时通过远距离  SRDF/A 链\n路到达活动  R2 周期（应用）。这可将为实现完全同步而必须在站点  B 和站点  C 之间\n移动的数据量降到最低。\n此示例显示了一个基本的级联  SRDF/Star 解决方案。远程复制解决方案\n82 产品指南   PowerMaxOS", metadata={
+            "page": 81,
+            "source": "/home/ubuntu/sources/pdfs/docu88904_PowerMax-系列产品指南.pdf"
+        }),
+  Document(page_content="l与 TimeFinder 产品系列紧密集成\nl地理位置分散的辅助站点和第三站点\n当主站点出现故障时，级联  SRDF 只需极少的用户干预就可以从辅助站点到第三站点\n继续镜像。这可以在第三站点实现更快的恢复。\n辅助站点和第三站点都可以是故障切换站点。开放式系统解决方案通常故障切换到第\n三站点。\n级联  SRDF 可以与  SRDF/Star 一起实施。 级联  SRDF/Star （第  82 页）  介绍级联的\nSRDF/Star 。\n图 15 级联  SRDF 拓扑\nSRDF/A or \nAdaptive copy Site A\nHostSite B Site C\nR1 R2 SRDF/S, \nSRDF/A or \nAdaptive copy R21 \nSRDF/Star 解决方案\nSRDF/Star 是一种灾难恢复解决方案，它包含三个站点：主（生产）站点、辅助站点\n和第三站点。辅助站点同步镜像来自主站点的数据，而第三站点则异步镜像生产数\n据。\n当主站点宕机时， SRDF/Star 解决方案让您可以快速在其余站点之间移动操作和重新\n建立远程镜像。当条件允许时，您可以快速将主站点重新连接到解决方案，从而恢复\nSRDF/Star 操作。\nSRDF/Star 可以在并发和级联环境中运行，能够实现不同的恢复和可用性目标：\nl并发  SRDF/Star － 数据从主站点并发镜像到两个  R2 设备。辅助站点和第三站点\n都是潜在的恢复站点。辅助站点和第三站点之间使用差异再同步。\nl级联  SRDF/Star － 数据首先从主站点镜像到辅助站点，然后再从辅助站点镜像到\n第三站点。辅助站点和第三站点都是潜在的恢复站点。主站点和第三站点之间使用\n差异再同步。\n两个远程站点之间的差异同步能够：\nl当主站点出现故障时，允许  SRDF/Star 快速重新建立跨站点镜像。\nl大幅缩短远程镜像新生产站点所需的时间。\n在发生影响主站点的雪崩式灾难时， SRDF/Star 可以帮助您确定哪个远程站点包含最\n新数据。在从主站点故障恢复时，您可以选择要运行的站点以及要使用哪个站点的数\n据。\n当主站点出现故障时， SRDF/Star 让您只需进行极少的数据移动，就可以在辅助站点\n和第三站点之间恢复异步保护。\n用于开放式系统的  SRDF/Star", metadata={
+            "page": 79,
+            "source": "/home/ubuntu/sources/pdfs/docu88904_PowerMax-系列产品指南.pdf"
+        }),
+  Document(page_content="表 13 SRDF 多站点解决方案   （续）\n解决方案亮点 站点拓扑\n“并发  SRDF ”\n3 站点灾难恢复和高级多站点业务\n连续性保护。\nl主站点上的数据会同时复制到\n2 个辅助站点。\nl到远程站点的复制可以使用\nSRDF/S、SRDF/A 或自适应拷\n贝。\n请参见： 并发  SRDF 解决方案 （第\n78 页）。\nSite A SRDF/S \nadaptive copy \nSite C Site B \nR2 R11 R2 \n“级联  SRDF ”\n3 站点灾难恢复和高级多站点业务\n连续性保护。\nl主站点上的数据同步镜像到辅\n助 (R21) 站点，然后从辅助\n(R21) 站点异步镜像至第三\n(R2) 站点。\nl第一“跳”为  SRDF/S 。第二\n跳是  SRDF/A 。\n请参见： 级联  SRDF 解决方案 （第\n79 页）。\nSite A Site C Site B \nSRDF/S SRDF/A \nR1 R2 R21 \n“SRDF/Star ”\n提供  3 站点数据保护和灾难恢复，\n以及零数据丢失恢复、业务连续性\n保护和灾难重启。\nl共有  2 种配置：\nn级联  SRDF/Star\nn并发  SRDF/Star\nl在多站点灾难恢复实施中，差\n异同步可以在幸存的站点中快\n速重新建立镜像。\nl使用带有  SRDF/S 和 SRDF/A\n的 SRDF 一致性组  (CG) 实\n施。\n请参见： SRDF/Star 解决方案 （第\n80 页）。\nSite A SRDF/S SRDF/A \nSRDF/A (recovery) R11\nSite C Site B Cascaded SRDF/Star \nConcurrent SRDF/Star \nSite A SRDF/S \nSRDF/A Site C Site B SRDF/A \n(recovery) R11\nR2/ \nR22 R2/ \nR22 R21 \nR21 \n并发  SRDF 解决方案\n并发  SRDF 是一种  3 站点灾难恢复解决方案，该方案使用  R11 设备复制到两个  R2 设\n备。两个  R2 设备使用任意组合的  SRDF 模式以并发方式独立工作：\nl如果  R11 站点位于两个  R2 站点的同步距离内，则以并发  SRDF/S 模式复制到两个\nR2 设备。远程复制解决方案\n78 产品指南   PowerMaxOS", metadata={
+            "page": 77,
+            "source": "/home/ubuntu/sources/pdfs/docu88904_PowerMax-系列产品指南.pdf"
+        })
+    ]
+}
